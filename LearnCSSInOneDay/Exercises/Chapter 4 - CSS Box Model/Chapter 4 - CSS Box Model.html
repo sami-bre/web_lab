@@ -1,41 +1,42 @@
 <!doctype html>
 <html>
-<head><title>Chapter 4 - CSS Box Model</title>
-      
-<style type="text/css">
 
-#box1 {
-	margin: 20px;
-	padding: 10px;
-	border: 5px solid black;
-	width: 100px;
-	height: 100px;
-	text-align: justify;
-	float: left;
-	overflow: auto;
-}
+<head>
+	<title>Chapter 4 - CSS Box Model</title>
 
-#box2 {
-	margin-top: 10px;
-	margin-right: 20px;
-	margin-bottom: 30px;
-	margin-left: -50px;
-	padding: 50px;
-	border: 5px solid black;
-	width: 100px;
-	height: 100px;
-	text-align: justify;
-	float: left;
-}
-</style></head>
+	<style type="text/css">
+		#box1 {
+			margin: 0 auto;
+			padding: 10px;
+			border: 5px solid black;
+			width: 80%;
+			height: 100px;
+			text-align: justify;
+			/* float: left; */
+			overflow: scroll;
+		}
+
+		#box2 {
+			margin: 20px;
+			padding: 20px;
+			border-radius: 120px;
+			border: 50px solid green;
+			width: 100px;
+			height: 100px;
+			text-align: justify;
+			float: left;
+		}
+	</style>
+</head>
 
 <body>
-<div id="box1">Learn CSS in One Day and Learn It Well. CSS is easy.</div>
-<div id="box2">Learn CSS in One Day and Learn It Well. CSS is easy.</div>
+	<div id="box1">Learn CSS in One Day and Learn It Well. This example shows what happens when text overflows the
+		dimension of the box.</div>
+	<div id="box2">Learn CSS in One Day and Learn It Well. CSS is easy.</div>
 
-<p>skajd fhadlc vkas j cnl ka jshvn aclaks jdclkasjd ckasj cnkas djvcn ksa 
-	mc nlkasd jn skajd fhadlc vkas j cnl ka jshvn aclaks jdclkasjd ckasj 
-	cnkas djvcn ksa mc nlkasd jn skajd fhadlc vkas j cnl ka jshvn aclaks 
-	jdclkasjd ckasj cnkas djvcn ksa mc nlkasd jn</p>
+	<p>skajd fhadlc vkas j cnl ka jshvn aclaks jdclkasjd ckasj cnkas djvcn ksa mc nlkasd jn skajd fhadlc vkas j cnl ka
+		jshvn aclaks jdclkasjd ckasj cnkas djvcn ksa mc nlkasd jn skajd fhadlc vkas j cnl ka jshvn aclaks jdclkasjd
+		ckasj cnkas djvcn ksa mc nlkasd jn</p>
 </body>
+
 </html>

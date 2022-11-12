@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pseudo selectors</title>
+    <style>
+        a {
+            border: 4px dashed blue;
+        }
+        a:hover {
+            border: 4px solid cyan;
+        }
+        a:active {
+            border: 4px, solid orange;
+        }
+        a:visited {
+            border: 4px solid violet;
+        }
+
+        #statefulDiv {
+            border: 1px solid black;
+            width: 250px;
+            height: 250px;
+            margin-top: 3cm;
+            margin-left: 3cm;
+        }
+
+        #statefulDiv:hover {
+            border: 1px dashed blue;
+        }
+
+        #statefulDiv:active {
+            border: 2px solid orange;
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.samibre.com">go to sami's</a>
+    <div id="statefulDiv"></div>
+    <a href="https://google.com">we're good</a>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selecting nth child</title>
+    <style>
+        p:nth-child(2) {
+            font-weight: bold;
+        }
+        p::first-letter {
+            font-size: 30px;
+        }
+        dIV::before {
+            content: "start of div -- ";
+            /* padding-top: 2cm; */
+        }
+        div::after {
+            content: "end of div -- ";
+            /* padding-bottom: 2cm; */
+        }
+    </style>
+</head>
+<body>
+    <h2></h2>
+     <div>
+        <p>first paragraph</p>
+        <p>second paragraph</p>
+        <p>third paragraph</p>
+        <p>fourth paragraph</p>
+     </div>
+     <div>
+        <p>another first paragraph</p>
+        <p>another second paragraph</p>
+     </div>
+     <span>
+        <p>paragraph in a span</p>
+        <p>another paragraph in a span</p>
+     </span>
+</body>
+</html>

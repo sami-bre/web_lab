@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p#content {
+            border: 2px solid orangered;
+        }
+        div#content {
+            border: 2px solid greenyellow;
+        }
+        /* because of preceedence, the rule below is overriden by those above. */
+        #content {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">content in div</div>
+    <p id="content">content in par</p>
+</body>
+</html>

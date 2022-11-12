@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>some advanced css selectors</title>
+    <style>
+
+        /* child selectors */
+        .card .title {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color: aqua;
+            border: dashed orangered;
+        }
+
+        .title {
+            font-family: 'Courier New', Courier, monospace;
+            color: black;
+            border: 2px solid yellowgreen;
+            border-radius: 10px;
+            padding: 14px;
+        }
+
+        /*multiple selectors*/
+        h3, p {
+            background-image: url("plain_man.png")
+        }
+
+        a[href='https://www.google.com'], a[href='https://firebase.google.com'] {
+            font-size: 24px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h3>I'm sick of doing headers with h*</h3>
+    <div class="title">the page name</div>
+    <div class="card">
+        <p class="title">The card name</p>
+    </div>
+    <a href="https://www.google.com">go to google</a>
+    <a href="https://firebase.google.com">go to firebase</a>
+    <a href="https://www.samibre.com">go to sami's</a>
+    <a href="https://www.meta.com">go to zukerberg's</a>
+
+</body>
+
+</html>

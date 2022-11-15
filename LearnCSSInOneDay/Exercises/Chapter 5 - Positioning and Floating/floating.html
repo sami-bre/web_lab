@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>floating left and right</title>
+    <style>
+        div {
+            padding: 10px;
+            border: 1px dashed black;
+            margin: 5px;
+            font-size: 12px;
+            float: right
+        }
+
+        #box1 {
+            width: 60px;
+            height: 100px;
+        }
+
+        #box2 {
+            width: 100px;
+            height: 20px;
+        }
+
+        #box3 {
+            width: 50px;
+            height: 150px;
+        }
+
+        #box4 {
+            width: 30px;
+            height: 50px;
+        }
+        
+        #box5 {
+            width: 150px;
+            height: 120px;
+        }
+
+        #box6 {
+            width: 120px;
+            height: 70px;
+        }
+
+        #box7 {
+            width: 25px;
+            height: 80px;
+        }
+
+        .clearFloat {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">box1</div>
+    <div id="box2">box2</div>
+    <div id="box3">box3</div>
+    <div id="box4">box4</div>
+    <div id="box5">box5</div>
+    <div id="box6">box6</div>
+    <div id="box7">box7</div>
+    <p>This is some text with the float NOT clealred</p>
+    <p class="clearFloat">This is some text with the float clealred</p>
+    <p>This is another text with the floar clealred</p>
+    <p>If the float is in a page is not clealred, text will wrap around the floated elements. clearing the float prevents that.</p>
+</body>
+</html>

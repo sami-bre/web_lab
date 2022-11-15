@@ -8,6 +8,7 @@ div {
     padding: 10px;
     border: 1px dashed black;
     margin: 5px;
+    font-size: 12px;
    float: left;
 }
 
@@ -40,6 +41,10 @@ div {
     height: 80px;
 }
 
+.clearFloat {
+    clear: both;
+}
+
 </style></head>
 
 <body>
@@ -50,6 +55,8 @@ div {
     <div id="box5">Box 5</div>
     <div id="box6">Box 6</div>
     <div id="box7">Box 7</div>	
-   
+   <p class="clearFloat">This is some thex that's not floated</p>
+   <p>This is more text that's not floated</p>
+   <p>This is yet another text that's not floated</p>
  </body>
 </html>

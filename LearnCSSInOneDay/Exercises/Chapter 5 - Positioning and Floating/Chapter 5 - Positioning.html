@@ -20,10 +20,27 @@
 	padding: 20px;
 	border: 5px dotted black;
 	margin: 10px;
+	position: relative;
+	top: 50px;
+	left: 70px;
+}
+
+#box3 {
+	position: absolute;
+	top: 50px;
+	left: 150px;
+	background-color: yellow;
+	width: 50px;
+	height: 50px;
+	padding: 20px;
+	border: 5px dotted black;
+	margin: 10px;
 }
 
 
 p {
+	position: fixed;
+	z-index: 2;
 }
 
 </style></head>
@@ -31,8 +48,10 @@ p {
 <body>
 
 		<div id="box1"></div>
-		<div id="box2"></div>
-
+		<div id="box2">
+			<div id="box3"></div>
+		</div>
+		
 	<p>This is some text added to demonstrate the concept of overlapping.</p>
 </body>
 </html>

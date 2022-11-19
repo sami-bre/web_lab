@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>DOM crawling</title>
+	<style>
+		.bondLabel {
+			font-weight: bold;
+		}
+
+		.parLabel {
+			font-weight: bold;
+			color: blue;
+		}
+	</style>
+</head>
+
+<body>
+	<p class="bond">first par</p>
+	<p>second par</p>
+	<div class="bond">
+		this is a div
+	</div>
+	<p class="james">third par</p>
+	<p>fourth par</p>
+	<div class="bond">
+		this is another div
+	</div>
+	<div>
+		this is yet another div
+		<span>and this is content in span</span>
+	</div>
+
+	<script>
+        // to demonstrate the workings of the script, first comment all the script below and
+        // open the page in a browser. then uncoment everything and see the change.
+
+		// let's add a label to all the paragraphs on the docyment.
+		var paragraphs = document.getElementsByTagName("p");
+		for (i = 0; i < paragraphs.length; i++) {
+			paragraphs[i].innerHTML += "<span class='parLabel'>&nbsp;PAR</span>";
+		}
+
+		// let's add labels to all the nodes with the classname 'bond'
+		const bonds = document.getElementsByClassName("bond");
+		for (i = 0; i < bonds.length; i++) {
+			bonds[i].innerHTML += "<span class='bondLabel'>&nbsp;BOND</span>"
+		}
+
+		//let's get all the span elements who are in a div and have the class name
+		// 'bondLabel' and some bangs(!!) at their ends
+		const bondSpansInDivs = document.querySelectorAll('div span[class="bondLabel"]');
+		for(let i=0; i<bondSpansInDivs.length; ++i){
+			bondSpansInDivs[i].innerHTML += "!!"
+		}
+		
+		// let's get the the class names for all the paragraphs, concatenate them and
+		// alert it to the user (some useless thing but great for learning :)
+		let allParagraphClassNames = "";
+		for(let i=0; i<paragraphs.length; ++i) {
+			allParagraphClassNames += paragraphs[i].getAttribute("class") + " ";
+		}
+		alert(allParagraphClassNames);
+	</script>
+</body>
+
+</html>

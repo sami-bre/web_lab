@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>color slider</title>
+    <script src="color_slider.js" defer></script>
+    <style>
+        div {
+            border: 1px solid black;
+            border-radius: 4px;
+        }
+
+        #container {
+            width: 400px;
+            height: 500px;
+            margin: 10px auto;
+        }
+
+        #colorSlider {
+            width: 380px;
+            margin: 10px;
+            background-color: blue;
+        }
+
+        #colorDisplay {
+            margin: 10px;
+            width: 380px;
+            height: 440px;
+        }
+
+        #header {
+            display: block;
+            width: fit-content;
+            font-size: 50px;
+            font-family:monospace;
+            font-weight: bold;
+            margin: 20px auto;
+            color: black;   /* will be overriden if the browser supportes text strokes */
+            -webkit-text-fill-color: white;
+            -webkit-text-stroke: 1px black;
+            text-shadow: -8px 8px black;
+        }
+    </style>
+</head>
+<body>
+    <header id="header">Color Slider</header>
+    <div id="container">
+        <div id="colorDisplay"></div>
+        <input type="range" name="colorSlider" id="colorSlider" min="0" max="360">
+    </div>
+</body>
+</html>

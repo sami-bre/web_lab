@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>appending before a child</title>
+</head>
+
+<body>
+    <div id="firstDiv">
+        <!-- <p>This is a paragraph in the first div</p> -->
+    </div>
+    <div>
+        <p>this is another paragraph in the first div</p>
+    </div>
+
+    <script>
+        // let's get some of our nodes
+        firstDiv = document.getElementsByTagName("div")[0];
+        children = firstDiv.childNodes;
+
+        // now let's get the first paragraph in the division
+        let firstParInFirstDiv;
+        for(let i=0; i<children.length; i++) {
+            if(children[i].tagName == "P") {
+                firstParInFirstDiv = children[i];
+                break;
+            }
+        }
+        // then if there's no paragraph found in the first Div ... 
+        // we'll add our own :)
+        if(firstParInFirstDiv == undefined) {
+            firstParInFirstDiv = document.createElement("p");
+            firstParInFirstDiv.appendChild(document.createTextNode("a first paragraph, created on the fly."))
+            firstDiv.appendChild(firstParInFirstDiv);
+        }
+
+        // now we're quite sure that we have a first paragraph in the first div :)
+        // let's add a heading before that first paragraph in the first div
+        let heading = document.createElement("h2");
+        heading.appendChild(document.createTextNode("This heading is inserted dynamically!"))
+        firstDiv.insertBefore(heading, firstParInFirstDiv)
+    </script>
+</body>
+
+</html>

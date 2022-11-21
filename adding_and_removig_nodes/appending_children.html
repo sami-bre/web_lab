@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>adding and removing elements</title>
+</head>
+<body>
+    <div id="container"></div>
+    <script>
+        // let's get the div and create new nodes
+        let firstDiv = document.getElementsByTagName("div")[0];
+        let par = document.createElement("p");
+        let text = document.createTextNode("This is the text in the paragraph");
+
+        par.appendChild(text);
+        firstDiv.appendChild(par);
+    </script>
+</body>
+</html>

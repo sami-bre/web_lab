@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>replacing and removing elements</title>
+    <style>
+        #replaceMe, #removeMe {
+            border: 1px solid black;
+            padding: 80px;
+        }
+
+        div {
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="replaceMe">
+            This div will be replaced within 5 seconds
+        </div>
+        <div id="removeMe">
+            And this div will be removed.
+        </div>
+    </div>
+
+    <script>
+        // let's get the container and the two divs
+        let container = document.querySelector("#container");
+        let replaceMe = document.querySelector("#replaceMe");
+        let removeMe = document.querySelector("#removeMe");
+
+        // and let's create a new element to replace ... replaceMe :)
+        let newImg = document.createElement("img");
+        newImg.setAttribute("src", "dazzle-line-man.gif");
+
+        // here is our function to replace and remove
+        function replaceAndRemove() {
+            container.replaceChild(newImg, replaceMe);
+            container.removeChild(removeMe)
+        }
+
+        // we do a setTimeout to apply the changes after five seconds.
+        setTimeout(replaceAndRemove, 5000)
+    </script>
+</body>
+</html>
